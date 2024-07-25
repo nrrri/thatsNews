@@ -23,7 +23,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Cg7-FW-xkk" customClass="NewsCollectionViewCell" customModule="thatsNews" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsCell" id="Cg7-FW-xkk" customClass="NewsCollectionViewCell" customModule="thatsNews" customModuleProvider="target">
                                 <rect key="frame" x="21.666666666666668" y="0.0" width="350" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Ta-Ja-y3J">
@@ -35,7 +35,7 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFF-Wi-GfT">
                                             <rect key="frame" x="16" y="144" width="318" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -62,6 +62,11 @@
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="350" height="300"/>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="H7H-Ob-GqM" id="8ER-GZ-YgA"/>
+                                    <outlet property="headlineLabel" destination="TFF-Wi-GfT" id="aC0-OR-99Y"/>
+                                    <outlet property="imageView" destination="j2P-XI-idF" id="IGx-JF-mRG"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

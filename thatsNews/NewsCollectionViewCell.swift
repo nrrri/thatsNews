@@ -8,5 +8,17 @@
 import UIKit
 
 class NewsCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var headlineLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    func setNewsItem(newsItem: Article) {
+        Task {
+            // try to retrieve data
+            await self.imageView.loadImage(url: URL(string: newsItem.urlToImage ?? ""))
+        }
+        self.headlineLabel.text = newsItem.title
+        self.descriptionLabel.text = newsItem.description
+    }
     
 }
