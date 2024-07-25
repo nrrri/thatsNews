@@ -7,6 +7,10 @@
 
 import Foundation
 
+//struct myTest: Codable {
+//    // codable = decodable + encodable
+//}
+
 struct NewsAPIResponse: Codable {
     let status: String?
     let totalResults: Int?

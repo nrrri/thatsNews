@@ -69,7 +69,7 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="350" height="300"/>
                                 <connections>
-                                    <outlet property="descriptionLabel" destination="H7H-Ob-GqM" id="8ER-GZ-YgA"/>
+                                    <outlet property="authorName" destination="H7H-Ob-GqM" id="8ER-GZ-YgA"/>
                                     <outlet property="headlineLabel" destination="TFF-Wi-GfT" id="aC0-OR-99Y"/>
                                     <outlet property="imageView" destination="j2P-XI-idF" id="IGx-JF-mRG"/>
                                 </connections>

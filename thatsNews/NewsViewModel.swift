@@ -17,6 +17,8 @@ protocol NewsViewModelDelegate: AnyObject {
 class NewsViewModel {
     var articles = [Article]() {
         didSet {
+            print(articles)
+            print("article >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
             self.delegate?.refreshUI()
         }
     }
@@ -109,6 +111,3 @@ extension UIImageView {
     }
 }
 
-//struct myTest: Codable {
-//    // codable = decodable + encodable
-//}
