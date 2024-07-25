@@ -12,6 +12,9 @@ class NewsCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.delegate = self
+        
         Task {
             await viewModel.refreshArticles()
         }
@@ -33,6 +36,7 @@ class NewsCollectionViewController: UICollectionViewController {
         }
         
         cell.setNewsItem(newsItem: self.viewModel.articles[indexPath.row])
+        cell.layer.cornerRadius = 16
         return cell
     }
 
@@ -40,6 +44,7 @@ class NewsCollectionViewController: UICollectionViewController {
 }
 
 // make extension is easier to adjust
+// add additional function (refreshUI) into the view
 extension NewsCollectionViewController: NewsViewModelDelegate {
     func refreshUI() {
         DispatchQueue.main.async {

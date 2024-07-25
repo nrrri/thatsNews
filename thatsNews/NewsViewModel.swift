@@ -15,7 +15,19 @@ protocol NewsViewModelDelegate: AnyObject {
 }
 
 class NewsViewModel {
-    var articles = [Article]()
+    var articles = [Article]() {
+        didSet {
+            self.delegate?.refreshUI()
+        }
+    }
+    
+    // include delegate in the scope and make it optaional (make sure that we have delegate)
+    var delegate: NewsViewModelDelegate?
+    
+    // can init just delegate
+    init(delegate: NewsViewModelDelegate? = nil) {
+        self.delegate = delegate
+    }
     
     func refreshArticles() async {
         guard let url = self.prepareArticlesURL() else {
